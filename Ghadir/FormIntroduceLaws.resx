@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="txtText.Text" xml:space="preserve">
+    <value>بسم الله الرحمن الرحیم
+اساس نامه صندوق قرض الحسنه غدیر
+تاریخ تاسیس: فروردین ماه 1389
+*مقدمه*
+وجود مشکلات مادی در بین افراد خانواده و اقوام نزدیک باعث به وجود آمدن صندوق غدیر گردیده با مشورت چند نفر از فامیل و دوستان، تصمیم گرفتیم که یک صندوق قرض الحسنه خانوادگی تشکیل دهیم و از طریق آن بتوانیم برخی از مشکلات را در حد توان صندوق برطرف سازیم.
+در فروردین 1389 صندوق اعلام موجودیت نمود و دستورالعمل تدوین شده برای صندوق مورد بررسی قرار گرفت و مقرر شد در بین فامیل و بستگان اطلاع رسانی شود و کسانی که تمایل دارند به عضویت صندوق در آیند، اطلاع رسانی انجام شد و هدف از تشکیل صندوق به اطلاع حضّار رسید و در تاریخ 20/6/1389 شرکت کنندگان با آرای خویش اعضای شورای صندوق را انتخاب نمودند و مقرر شد، اعضای شورا طبق اساس نامه و دستورالعمل تدوین شده امور اجرایی صندوق را شروع نمایند.
+قرض در فرهنگ اسلامی
+قرض، جزئی از ارکان یک نظام اقتصادی است که دارای نتایجی میباشد و در قرآن و روایات به اهمیت آن تاکید شده است. قرض نتایجی چون زنده کردن روح عطوفت در جامعه و ایجاد قسط و عدالت دارد ریا بر ظلم و تعدی و جمع کردن مال بنا شده است و قرض بر ایثار و احسان و مردم داری استوار گشته است. از اینرو قرض، ربا را از صحنه اقتصادی بیرون میکند. در قرآن، ربا نظام زشت و منکر اقتصادی شمرده شده است. 
+در قرآن کریم، قرض در ردیف مسائلی چون صدقه، انفاق، زکات و نماز آمده و این حاکی از اهمیت آن است. همان طور که نماز برای تعالی روح بشر و شرط عبودیت و موجب ارتباط با مبدا هستی است و به جا آوردن آن موجب دوری از مفاسد اخلاقی و اجتماعی می گردد، قرض و صدقه و انفاق و زکات هم موجب تقرب به خداوند عالم میشود.
+*اساسنامه صندوق غدیر*
+اساس و شیوه تعامل بین اعضای صندوق و موسسین بدین صورت است که:
+اعضا به جهت اعتماد و اطمینان به موسسین صندوق، آنها را امین خود داشته و براین اساس (نه به عنوان قرض) سهم معین شده را به صورت ماهانه در اختیار صندوق قرار داده تا اعضای محترم موسس با رعایت امانتداری در این اموال تصرف نمایند. (در قالب وام قرض الحسنه و....)
+نکته: افتتاح حساب به منزله رضایت صاحبان حساب از عمل به تمام مفاد اساسنامه می باشد.
+اعضای موسس صندوق غدیر به شرح ذیل میباشد:
+1)سید محمد جعفری2)سید محمود جعفری3)سید ابراهیم جعفری4)سید محمد فاطمی نسب
+موسسین صندوق پس از راه اندازی و تاسیس صندوق اطلاع رسانی لازم را بین اعضا طی یک جلسه که به دعوت اعضای موسس تشکیل می گردد، انجام میدهند و توجیه کامل نسبت به اساس نامه و برنامه های کاری صندوق و رای گیری جهت انتخاب شورای صندوق صورت میپذیرد. در صورت انتخاب آنان از طرف اعضای صندوق با آرای عمومی با عنوان اعضای شورای صندوق می توانند فعالیت صندوق را اداره نمایند و در صورتی که با آرای عمومی افراد دیگری به عنوان شورای صندوق انتخاب گردیدند موسسین نظارت لازم را بر عملیات صندوق داشته و اجرای اساسنامه صندوق برای اعضای شورا لازم و ضروری می باشد و در صورت عدم رعایت اساسنامه صندوق، اعضای شورا صلاحیت اداره صندوق را نداشته و با نظر موسسین صندوق تدابیر لازم را جهت انتخاب اعضای شورای جدید صورت می پذیرد.
+اعضای شورای صندوق:
+1-مسئول صندوق                             2-معاون                                    3-حسابدار
+شرایط اعضای شورای صندوق به شرح زیر می باشد:
+1-حداقل سن 22 سال                    2-حداقل سواد پایان دوره راهنمایی                      3-همکاری صمیمانه و مداوم
+وظایف اعضای شورای صندوق:
+1-مسئول صندوق: وظیفه دارد اعضای شورا و اعضای جلسه هماهنگی های لازم را به عمل آورده و در جلسات شورای صندوق که برای بهبود روند کاری صندوق تشکیل می گردد مدیریت لازم را به عمل آورد.
+2-معاون: درغیاب مسئول صندوق تمام وظایف ایشان را به عهده خواهد گرفت.
+3-مسئول حسابداری: نظارت بر انجام عملیات مالی صندوق در قالب حسابداری، پس انداز و وام 
+چگونگی انتخاب شورای صندوق:
+1-شورا با آرای عمومی اضر در جلسه برای مدت سه سال انتخاب میگردد که این جلسه به صورت عمومی برگزار می شود که از قبل به اطلاع عموم رسیده باشد.
+2-اعضای شورای صندوق سه نفر میباشند که با آرای مأخوذه مسئولیت شورای صندوق انتخاب می گردد و صورتی که یکی از سه نفر استعفای خود را از عضویت شورا اعلام نماید نفر بعدی با رأی گیری به عنوان عضو شورا انتخاب می گردد.
+*شرایط عضویت در صندوق غدیر*
+1-اعتقاد به اصل ولایت فقیه و نظام جمهوری اسلامی 
+2-پرداخت حق ماهانه که سقف آن توسط شورای صندوق سالیانه اعلام میگردد.
+3-عدم پرداخت حق عضویت به مدت سه ماه متوالی به منزله انصراف از صندوق می باشد که در این خصوص اعضاء شورا تصمیم می گیرند.
+4-پذیرش عضو جدید با نظر شورا می باشد.
+*فعالیت صندوق*
+فعالیت صندوق شامل جذب منابع قرض الحسنه، بلاعوض، باقیات الصالحات، حق عضویت و بکارگیری منابع جذب شده در قالب 1-پرداخت قرض الحسنه (وام عادی، ازدواج، اضطراری، درمان، مسکن و...) 2- عقود اسلامی به تشخیص اعضای شورای صندوق و سرمایه گذاری جهت تحصیل درآمد در صورت داشتن اعتبار بلااستفاده به تشخیص شورای صندوق و تقسیم سود حاصله بین اعضای صندوق به نسبت سهم هر فرد و مدت زمان عضویت در صندوق.
+*نوع وام‌ها*
+1-عادی2-درمان3-ازدواج4-اضطراری5-زیارت6-مسکن(خرید و تعمیرات)
+*شرایط پرداخت وام*
+1-عضویت در صندوق غدیر
+2-اعضاء شورا نیاز درخواست را تایید نمایند
+3-اگر تعداد متقاضی به گونه ای باشد که موجودی صندوق با در نظر گرفتن شرایط و مقررات نتواند نیاز آنان را مرتفع سازد در بین اعضا درخواست کننده قرعه کشی انجام می گردد.
+4-رعایت سقف بازپرداخت  که از طرف شورای صندوق اعلام می گردد، الزامی است.
+سقف وام های پرداختی:
+سقف مبلغ وام ها و سقف تعداد اقساط، سالیانه توسط اعضای شورای صندوق مشخص می شود و پس از ابلاغ اعمال می‌گردد.‌
+مدارک مورد نیاز:
+مدارک مورد نیاز وام ها بر مبنای سقف وام ها و موقعیت زمانی توسط اعضای شورای صندوق مشخص و هنگام تشکیل پرونده از گیرنده وام اخذ می گردد.
+اولویت در پرداخت وام ها
+1- وام اضطراری 2- وام درمان 3- وام ازدواج 4- وام عادی 5-وام زیارت 6-وام مسکن
+*نحوه قرعه کشی *
+دفترچه هایی که به حد نصاب نرسد نمی‌توانند در قرعه کشی‌ها شرکت نمایند و از هیچ امتیازی برخوردار نمی‌باشند. دفترچه هایی که به حد نصاب می رسند شش ماه پس از افتتاح حساب می‌توانند در قرعه کشی شرکت نمایند.
+کارمزد وام های پرداختی
+1-نرخ کارمزد وام های پرداختی متاثر از میزان فعالیت صندوق و میزان هزینه های جاری صندوق توسط شورای صندوق مشخص و اعمال می گردد
+که این کارمزدها به صورت هبه بلاعوض از طرف وام گیرندگان پرداخت می‌شود.
+2-کارمزد دریافتی از گیرندگان وام صرف هزینه های جاری صندوق گردیده و در صورت مازاد بر مصرف تا زمانی که صندوق به فعالیت خود ادامه می دهد جزء موجودی صندوق در گردش بوده و به عنوان اعتبار جهت پرداخت وام استفاده می گردد و در صورت انحلال صندوق پس از تسویه حساب با اعضای صندوق بانظر اعضای شورای وقت صرف امور خیریه شده و نتیجه آن به اطلاع کلیه اعضا خواهد رسید و یا بین اعضا وقت به نسبت هرسهم تقسیم خواهد شد.
+*شرایط انصراف*
+فردی که قصد انصراف از عضویت در صندوق را دارد بایستی هم زمان با انسداد حساب، کلیه بدهی خود را یکجا به صندوق بپردازد و در صورت نداشتن بدهی، موجودی آن با توجه به توان صندوق در اولین فرصت به صورت تدریجی پرداخت میگردد.
+پیشنهادات و انتقادات
+اعضای صندوق جهت بهبود کار صندوق باید پیشنهادات خود را کتبی ارائه نمایند که پس از بررسی در صورت مفید بودن آن و تصویب شورای صندوق به اجرا در می آید.
+هر یک از اعضا اگر نسبت به صندوق و اعضای آن ایراد و اشکالی دارند، با دلیل و سند به صورت کتبی به یکی از اعضای شورا(بازرس) منتقل نمایند، در فیر این صورت اگر در جلسه یا خارج از جلسه جوسازی نمایند به عنوان متخلف شناخته شده، و با اول تذکر شفاهی، بار دوم تذکر کتبی داده خواهد شد و بار سوم به صورت یک جانبه با تصمیم شورای صندوق عذر وی را خواسته و با ایشان تسویه حساب می شود و از صندوق اخراج می گردد.
+پایان
+</value>
+  </data>
+</root>

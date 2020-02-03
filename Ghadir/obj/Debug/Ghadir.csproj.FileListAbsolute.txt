@@ -1,0 +1,122 @@
+E:\Ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.exe.config
+E:\Ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.exe
+E:\Ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.pdb
+E:\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.csprojResolveAssemblyReference.cache
+E:\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.Form1.resources
+E:\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.Properties.Resources.resources
+E:\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.csproj.GenerateResource.Cache
+E:\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.exe
+E:\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.pdb
+E:\Ghadir\Ghadir\Ghadir\bin\Debug\Bunifu_UI_v1.5.4.dll
+G:\Documents\Documents\Project C#\Ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.exe.config
+G:\Documents\Documents\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.exe
+G:\Documents\Documents\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.pdb
+G:\Documents\Documents\Project C#\Ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.exe
+G:\Documents\Documents\Project C#\Ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.pdb
+G:\Documents\Documents\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.Form1.resources
+G:\Documents\Documents\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.Properties.Resources.resources
+G:\Documents\Documents\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.csproj.GenerateResource.Cache
+F:\Ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.exe.config
+F:\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.exe
+F:\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.pdb
+F:\Ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.exe
+F:\Ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.pdb
+F:\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.Form1.resources
+F:\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.Properties.Resources.resources
+F:\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.csproj.GenerateResource.Cache
+F:\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.MainForm.resources
+F:\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.csprojResolveAssemblyReference.cache
+F:\Ghadir\Ghadir\Ghadir\bin\Debug\Animator.dll
+E:\Project C#\Ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.exe.config
+E:\Project C#\Ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.exe
+E:\Project C#\Ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.pdb
+E:\Project C#\Ghadir\Ghadir\Ghadir\bin\Debug\Animator.dll
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.CreateForm.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.ExitForm.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.Form1.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormAboutCreatorTeam.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormInfoAza.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormIntroduceLaws.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.GroupPayForm.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.MainForm.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.Properties.Resources.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionAza.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionFeatures.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionFirst.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionKarbary.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionSarmaye.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionSetting.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionStatusOfSandoogh.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionVam.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.VamForm.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.csproj.GenerateResource.Cache
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.exe.licenses
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.exe
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.pdb
+J:\Documents\Documents\Project C#\Ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.exe.config
+J:\Documents\Documents\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.csprojResolveAssemblyReference.cache
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormInfoVam.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormCurrentDate.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormNote.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormAddNote.resources
+E:\Project C#\Ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.csprojResolveAssemblyReference.cache
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.exe.config
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.exe
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.pdb
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.exe
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.pdb
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.CreateForm.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.ExitForm.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.Form1.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormAboutCreatorTeam.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormAddNote.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormCurrentDate.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormInfoAza.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormInfoVam.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormIntroduceLaws.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormNote.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.GroupPayForm.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.MainForm.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.Properties.Resources.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionAza.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionFeatures.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionFirst.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionKarbary.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionSarmaye.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionSetting.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionStatusOfSandoogh.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionVam.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.VamForm.resources
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.csproj.GenerateResource.Cache
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.exe.licenses
+C:\Users\Computer Brain\Desktop\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.csprojResolveAssemblyReference.cache
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.CreateForm.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.ExitForm.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.Form1.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormAboutCreatorTeam.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormAddNote.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormCurrentDate.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormInfoAza.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormInfoVam.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormIntroduceLaws.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.FormNote.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.GroupPayForm.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.MainForm.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionAza.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionFeatures.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionFirst.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionKarbary.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionSarmaye.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionSetting.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionStatusOfSandoogh.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.SectionVam.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.VamForm.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.csproj.GenerateResource.Cache
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.Properties.Resources.resources
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.exe.licenses
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.exe.config
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.exe
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.pdb
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.exe
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.pdb
+E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.csprojResolveAssemblyReference.cache
