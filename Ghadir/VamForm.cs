@@ -116,6 +116,7 @@ namespace Ghadir
                 con.Close();
                 cboRecieverVam.Items.AddRange(nameOfRecieverVam.ToArray());
                 cboZamen.Items.AddRange(nameOfZamen.ToArray());
+                cboZamen.Items.Add("ندارد");
                 cboTypeVam.SelectedIndex = -1;
             }
             else
@@ -164,6 +165,7 @@ namespace Ghadir
                 txtCodeVamReciever.Text = codeMembers[nameOfRecieverVam.IndexOf(cboRecieverVam.Text)].ToString();
                 cboZamen.Items.Clear();
                 cboZamen.Items.AddRange(nameOfZamen.ToArray());
+                cboZamen.Items.Add("ندارد");
                 cboZamen.Items.Remove(cboRecieverVam.Text);
                 txtCodeZamen.Text = "";
             }
@@ -220,7 +222,7 @@ namespace Ghadir
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            if (txtCodeZamen.TextLength == 0 || txtCodeVamReciever.TextLength == 0 || cboRecieverVam.Text.Length == 0 || cboZamen.Text.Length == 0 || txtMablagh.TextLength == 0 || txtDateBack.TextLength == 0 || txtNumberAghsat.TextLength == 0 || txtDay.TextLength == 0 || txtMonth.TextLength == 0 || txtYear.TextLength == 0 || txtDayEnd.TextLength == 0 || txtMonthEnd.TextLength == 0 || txtYearEnd.TextLength == 0)
+            if (txtCodeVamReciever.TextLength == 0 || cboRecieverVam.Text.Length == 0 || cboZamen.Text.Length == 0 || txtMablagh.TextLength == 0 || txtDateBack.TextLength == 0 || txtNumberAghsat.TextLength == 0 || txtDay.TextLength == 0 || txtMonth.TextLength == 0 || txtYear.TextLength == 0 || txtDayEnd.TextLength == 0 || txtMonthEnd.TextLength == 0 || txtYearEnd.TextLength == 0)
             {
                 MessageBox.Show(".بعضی از فیلد ها خالی می باشند", "!!خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -236,9 +238,10 @@ namespace Ghadir
             {
                 MessageBox.Show(".لطفا شماره عضویت گیرنده وام را با دقت وارد کنید", "!!خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (codeMembers.IndexOf(int.Parse(txtCodeZamen.Text.Trim())) < 0)
+            else if (cboZamen.Text.IndexOf("ندارد") < 0)
             {
-                MessageBox.Show(".لطفا شماره عضویت ضامن  را با دقت وارد کنید", "!!خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if(codeMembers.IndexOf(int.Parse(txtCodeZamen.Text.Trim())) < 0)
+                    MessageBox.Show(".لطفا شماره عضویت ضامن  را با دقت وارد کنید", "!!خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -248,7 +251,10 @@ namespace Ghadir
                     com.Parameters.Clear();
                     com.Parameters.AddWithValue("@RecieverLoan", cboRecieverVam.Text.Substring(0,cboRecieverVam.Text.IndexOf(">")));
                     com.Parameters.AddWithValue("@JoinNumberRecieverLoan", txtCodeVamReciever.Text.Trim());
-                    com.Parameters.AddWithValue("@Guarantor", cboZamen.Text.Substring(0, cboZamen.Text.IndexOf(">")));
+                    if (cboZamen.Text.IndexOf("ندارد") >= 0)
+                        com.Parameters.AddWithValue("@Guarantor", "ندارد");
+                    else
+                        com.Parameters.AddWithValue("@Guarantor", cboZamen.Text.Substring(0, cboZamen.Text.IndexOf(">")));
                     com.Parameters.AddWithValue("@JoinNumberGuarantor", txtCodeZamen.Text.Trim());
                     com.Parameters.AddWithValue("@LoanType", cboTypeVam.Text.Trim());
                     com.Parameters.AddWithValue("@Amount", txtMablagh.Text.Trim());
@@ -382,7 +388,10 @@ namespace Ghadir
                     com.Parameters.Clear();
                     com.Parameters.AddWithValue("@RecieverLoan", cboRecieverVam.Text.Substring(0, cboRecieverVam.Text.IndexOf(">")));
                     com.Parameters.AddWithValue("@JoinNumberRecieverLoan", txtCodeVamReciever.Text.Trim());
-                    com.Parameters.AddWithValue("@Guarantor", cboZamen.Text.Substring(0, cboZamen.Text.IndexOf(">")));
+                    if (cboZamen.Text.IndexOf("ندارد") >= 0)
+                        com.Parameters.AddWithValue("@Guarantor", "ندارد");
+                    else
+                        com.Parameters.AddWithValue("@Guarantor", cboZamen.Text.Substring(0, cboZamen.Text.IndexOf(">")));
                     com.Parameters.AddWithValue("@JoinNumberGuarantor", txtCodeZamen.Text.Trim());
                     com.Parameters.AddWithValue("@LoanType", cboTypeVam.Text.Trim());
                     com.Parameters.AddWithValue("@Amount", txtMablagh.Text.Trim());
