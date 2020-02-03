@@ -24,7 +24,7 @@ namespace Ghadir
         {
             try
             {
-                if ( int.Parse(txtPercentEzdevagVam.Text) > 100 || int.Parse(txtPercentHomeVam.Text) > 100 || int.Parse(txtPercentImportantVam.Text) > 100  || int.Parse(txtPercentSampleVam.Text) > 100  || int.Parse(txtPercentZiaratVam.Text) > 100 || int.Parse(txtPercentDarmanLoan.Text) > 100)
+                if ( float.Parse(txtPercentEzdevagVam.Text) > 100 || float.Parse(txtPercentHomeVam.Text) > 100 || float.Parse(txtPercentImportantVam.Text) > 100  || float.Parse(txtPercentSampleVam.Text) > 100  || float.Parse(txtPercentZiaratVam.Text) > 100 || float.Parse(txtPercentDarmanLoan.Text) > 100)
                 {
                     MessageBox.Show(".لطفا در صد های کارمزد ها را درست وارد کنید", "!!خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -72,7 +72,7 @@ namespace Ghadir
        }       
         private void txtPercentSampleVam_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) == false && e.KeyChar != '\b')
+            if (char.IsNumber(e.KeyChar) == false && e.KeyChar != '\b' && e.KeyChar != '.')
             {
                 e.Handled = true;
             }
