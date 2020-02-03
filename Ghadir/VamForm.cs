@@ -226,7 +226,7 @@ namespace Ghadir
             {
                 MessageBox.Show(".بعضی از فیلد ها خالی می باشند", "!!خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (txtYear.TextLength !=4 || txtYearEnd.TextLength != 4)
+            else if (txtYear.TextLength != 4 || txtYearEnd.TextLength != 4)
             {
                 MessageBox.Show(".لطفا فیلد های تاریخ را درست وارد کنید", "!!خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -240,263 +240,268 @@ namespace Ghadir
             }
             else if (cboZamen.Text.IndexOf("ندارد") < 0)
             {
-                if(codeMembers.IndexOf(int.Parse(txtCodeZamen.Text.Trim())) < 0)
+                if (codeMembers.IndexOf(int.Parse(txtCodeZamen.Text.Trim())) < 0)
                     MessageBox.Show(".لطفا شماره عضویت ضامن  را با دقت وارد کنید", "!!خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    SetLoan();
             }
-            else
+            else if (cboZamen.Text.IndexOf("ندارد") >= 0)
             {
-                if (isGiveVam)
+                SetLoan();
+            }
+        }
+        private void SetLoan()
+        {
+            if (isGiveVam)
+            {
+                com.Connection = con;
+                com.Parameters.Clear();
+                com.Parameters.AddWithValue("@RecieverLoan", cboRecieverVam.Text.Substring(0, cboRecieverVam.Text.IndexOf(">")));
+                com.Parameters.AddWithValue("@JoinNumberRecieverLoan", txtCodeVamReciever.Text.Trim());
+                if (cboZamen.Text.IndexOf("ندارد") >= 0)
+                    com.Parameters.AddWithValue("@Guarantor", "ندارد");
+                else
+                    com.Parameters.AddWithValue("@Guarantor", cboZamen.Text.Substring(0, cboZamen.Text.IndexOf(">")));
+                com.Parameters.AddWithValue("@JoinNumberGuarantor", txtCodeZamen.Text.Trim());
+                com.Parameters.AddWithValue("@LoanType", cboTypeVam.Text.Trim());
+                com.Parameters.AddWithValue("@Amount", txtMablagh.Text.Trim());
+                if (chkKarmozd.Checked)
                 {
-                    com.Connection = con;
-                    com.Parameters.Clear();
-                    com.Parameters.AddWithValue("@RecieverLoan", cboRecieverVam.Text.Substring(0,cboRecieverVam.Text.IndexOf(">")));
-                    com.Parameters.AddWithValue("@JoinNumberRecieverLoan", txtCodeVamReciever.Text.Trim());
-                    if (cboZamen.Text.IndexOf("ندارد") >= 0)
-                        com.Parameters.AddWithValue("@Guarantor", "ندارد");
-                    else
-                        com.Parameters.AddWithValue("@Guarantor", cboZamen.Text.Substring(0, cboZamen.Text.IndexOf(">")));
-                    com.Parameters.AddWithValue("@JoinNumberGuarantor", txtCodeZamen.Text.Trim());
-                    com.Parameters.AddWithValue("@LoanType", cboTypeVam.Text.Trim());
-                    com.Parameters.AddWithValue("@Amount", txtMablagh.Text.Trim());
-                    if (chkKarmozd.Checked)
-                    {
-                        com.Parameters.AddWithValue("@PercentKarmozd", txtPercentKarmozd.Text.Trim());
-                    }
-                    else
-                    {
-                        com.Parameters.AddWithValue("@PercentKarmozd", "0");
-                    }
-                    com.Parameters.AddWithValue("@DateBack", txtDateBack.Text.Trim());
-                    com.Parameters.AddWithValue("@NumberOfAghsat", txtNumberAghsat.Text.Trim());
-                    com.Parameters.AddWithValue("@DateStart", txtYear.Text.Trim() + "/" + txtMonth.Text.Trim() + "/" + txtDay.Text.Trim());
-                    com.Parameters.AddWithValue("@DateFinish", txtYearEnd.Text.Trim() + "/" + txtMonthEnd.Text.Trim() + "/" + txtDayEnd.Text.Trim());
-                    com.CommandText = "insert into tbl_loan (RecieverLoan , JoinNumberRecieverLoan , Guarantor , JoinNumberGuarantor , LoanType , Amount , PercentKarmozd , DateBack , NumberOfAghsat , DateStart , DateFinish) values (@RecieverLoan , @JoinNumberRecieverLoan , @Guarantor , @JoinNumberGuarantor , @LoanType , @Amount , @PercentKarmozd , @DateBack , @NumberOfAghsat , @DateStart , @DateFinish)";
-                    con.Open();
-                    com.ExecuteNonQuery();
-
-                    com.Parameters.Clear();
-                    com.Parameters.AddWithValue("@NumberOfInstallment", txtNumberAghsat.Text.Trim());
-                    com.Parameters.AddWithValue("@AmountPerInstallment", long.Parse(txtMablagh.Text)/long.Parse(txtNumberAghsat.Text));
-                    com.Parameters.AddWithValue("@NumberPayInstallment", 0);
-                    com.Parameters.AddWithValue("@NumberNonPayInstallment", txtNumberAghsat.Text.Trim());
-                    com.Parameters.AddWithValue("@NumberPayAmount", 0 );
-                    if (chkKarmozd.Checked && txtPercentKarmozd.Text != "0")
-                    {
-                        long   karmozd = (long.Parse(txtMablagh.Text) * long.Parse(txtPercentKarmozd.Text)) / 100;
-                        com.Parameters.AddWithValue("@NumberNonPayAmount", long.Parse(txtMablagh.Text) + karmozd);
-                    }
-                    else
-                    {
-                        com.Parameters.AddWithValue("@NumberNonPayAmount", txtMablagh.Text);
-                    }
-                    com.Parameters.AddWithValue("@DateLastPay", "-");
-
-                    //-----------------------
-                    DAY = int.Parse(txtDay.Text);
-                    MONTH = int.Parse(txtMonth.Text);
-                    YEAR = int.Parse(txtYear.Text);
-                    //برای اسفند ماه
-                    if ((MONTH + 1)   == 12 && (DAY == 30))
-                    {
-                        YEAR += 1;
-                        DAY = 1;
-                        MONTH = 1;
-                        ISMONTHESFAN = true;
-                    }
-                    if ((MONTH + 1) > 12)
-                    {
-                        YEAR += 1;
-                        MONTH = 1;
-                        ISMONTHESFAN = true;
-                    }
-                    //برای نیمه اول سال کنونی
-                    if (MONTH +1 <= 6 &&  MONTH+1 >= 1 && ISMONTHESFAN == false && ISFIRSTHALF == false)
-                    {
-                        ISFIRSTHALF = true;
-                        MONTH +=1;
-                    }
-                    //برای نیمه دوم سال کنونی
-                    if (MONTH+1 > 6 && MONTH+1 < 13 && ISFIRSTHALF == false && ISMONTHESFAN == false)
-                    {
-                        if (DAY == 31)
-                        {
-                            DAY = 1;
-                            MONTH += 2;
-                        }
-                        else
-                        {
-                            MONTH += 1;
-                        }
-                        CURRENTYEAR = true;
-                    }
-
-                    if (MONTH > 12 && ISMONTHESFAN == false && CURRENTYEAR == false)
-                    {
-                        YEAR += 1;
-                        //برای نیمه دوم سال بعد
-                        if (DAY == 31 &&  MONTH+1> 6)
-                        {
-                            DAY = 1;
-                            MONTH += 1;
-                        }
-                        else
-                        {
-                            DAY = int.Parse(txtDay.Text);
-                            MONTH += 1;
-                        }
-                    }
-            //-----------------------
-                    com.Parameters.AddWithValue("@DateNextPay", YEAR +"/"+MONTH+"/"+DAY );
-                    if (chkKarmozd.Checked)
-                    {
-                        com.Parameters.AddWithValue("@PayKarmozd", "0");
-                    }
-                    else
-                    {
-                        com.Parameters.AddWithValue("@PayKarmozd", "1");
-                    }
-                    com.CommandText = "insert into tbl_installment (NumberOfInstallment , AmountPerInstallment , NumberPayInstallment , NumberNonPayInstallment , NumberPayAmount , NumberNonPayAmount , DateLastPay , DateNextPay , PayKarmozd)  values (@NumberOfInstallment , @AmountPerInstallment , @NumberPayInstallment , @NumberNonPayInstallment , @NumberPayAmount , @NumberNonPayAmount , @DateLastPay , @DateNextPay , @PayKarmozd)";
-                    com.ExecuteNonQuery();
-                    MessageBox.Show(".وام مورد نظر با موفقیت ثبت شد", "!!پیام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    com.CommandText = "select max(Loan) from tbl_loan";
-                    maxLoan = int.Parse(com.ExecuteScalar().ToString());
-                    txtNumberVam.Text = (maxLoan + 1).ToString();
-                    con.Close();
-                    txtCodeVamReciever.Clear();
-                    txtCodeZamen.Clear();
-                    txtMablagh.Clear();
-                    chkKarmozd.Checked = false;
-                    txtDateBack.Clear();
-                    txtNumberAghsat.Clear();
-                    txtDay.Clear();
-                    txtMonth.Clear();
-                    txtYear.Clear();
-                    txtDayEnd.Clear();
-                    txtMonthEnd.Clear();
-                    txtYearEnd.Clear();
-                    txtPercentKarmozd.Clear();
-                    cboTypeVam.SelectedIndex = -1;
-                    cboRecieverVam.SelectedIndex = -1;
-                    cboZamen.SelectedIndex = -1;
-                    ISFIRSTHALF = false;
-                    ISMONTHESFAN = false;
-                    CURRENTYEAR = false;
+                    com.Parameters.AddWithValue("@PercentKarmozd", txtPercentKarmozd.Text.Trim());
                 }
                 else
                 {
-                    com.Connection = con;
-                    com.Parameters.Clear();
-                    com.Parameters.AddWithValue("@RecieverLoan", cboRecieverVam.Text.Substring(0, cboRecieverVam.Text.IndexOf(">")));
-                    com.Parameters.AddWithValue("@JoinNumberRecieverLoan", txtCodeVamReciever.Text.Trim());
-                    if (cboZamen.Text.IndexOf("ندارد") >= 0)
-                        com.Parameters.AddWithValue("@Guarantor", "ندارد");
-                    else
-                        com.Parameters.AddWithValue("@Guarantor", cboZamen.Text.Substring(0, cboZamen.Text.IndexOf(">")));
-                    com.Parameters.AddWithValue("@JoinNumberGuarantor", txtCodeZamen.Text.Trim());
-                    com.Parameters.AddWithValue("@LoanType", cboTypeVam.Text.Trim());
-                    com.Parameters.AddWithValue("@Amount", txtMablagh.Text.Trim());
-                    if (chkKarmozd.Checked)
-                    {
-                        com.Parameters.AddWithValue("@PercentKarmozd", txtPercentKarmozd.Text.Trim());
-                    }
-                    else
-                    {
-                        com.Parameters.AddWithValue("@PercentKarmozd", "0");
-                    }
-                    com.Parameters.AddWithValue("@DateBack", txtDateBack.Text.Trim());
-                    com.Parameters.AddWithValue("@NumberOfAghsat", txtNumberAghsat.Text.Trim());
-                    com.Parameters.AddWithValue("@DateStart", txtYear.Text.Trim() + "/" + txtMonth.Text.Trim() + "/" + txtDay.Text.Trim());
-                    com.Parameters.AddWithValue("@DateFinish", txtYearEnd.Text.Trim() + "/" + txtMonthEnd.Text.Trim() + "/" + txtDayEnd.Text.Trim());
-                    com.CommandText = "update tbl_loan set RecieverLoan = @RecieverLoan, JoinNumberRecieverLoan = @JoinNumberRecieverLoan , Guarantor = @Guarantor , JoinNumberGuarantor  = @JoinNumberGuarantor , LoanType = @LoanType , Amount = @Amount , PercentKarmozd = @PercentKarmozd  , DateBack = @DateBack , NumberOfAghsat =@NumberOfAghsat , DateStart  = @DateStart, DateFinish = @DateFinish where Loan  =" + code ;
-                    con.Open();
-                    com.ExecuteNonQuery();
-
-                    com.Parameters.Clear();
-                    com.Parameters.AddWithValue("@NumberOfInstallment", txtNumberAghsat.Text.Trim());
-                    com.Parameters.AddWithValue("@AmountPerInstallment", long.Parse(txtMablagh.Text) / long.Parse(txtNumberAghsat.Text));
-                    com.Parameters.AddWithValue("@NumberPayInstallment", 0);
-                    com.Parameters.AddWithValue("@NumberNonPayInstallment", txtNumberAghsat.Text.Trim());
-                    com.Parameters.AddWithValue("@NumberPayAmount", 0);
-                    if (chkKarmozd.Checked && txtPercentKarmozd.Text != "0")
-                    {
-                        long karmozd = (long.Parse(txtMablagh.Text) * long.Parse(txtPercentKarmozd.Text)) / 100;
-                        com.Parameters.AddWithValue("@NumberNonPayAmount", long.Parse(txtMablagh.Text) + karmozd);
-                    }
-                    else
-                    {
-                        com.Parameters.AddWithValue("@NumberNonPayAmount", txtMablagh.Text);
-                    }
-                    com.Parameters.AddWithValue("@DateLastPay", "-");
-
-                    //-----------------------
-                    DAY = int.Parse(txtDay.Text);
-                    MONTH = int.Parse(txtMonth.Text);
-                    YEAR = int.Parse(txtYear.Text);
-                    //برای اسفند ماه
-                    if ((MONTH + 1) % 12 == 0 && (DAY == 31 || DAY == 30))
-                    {
-                        YEAR += 1;
-                        DAY = 1;
-                        MONTH = 1;
-                        ISMONTHESFAN = true;
-                    }
-                    if ((MONTH + 1) > 12)
-                    {
-                        YEAR += 1;
-                        MONTH = 1;
-                        ISMONTHESFAN = true;
-                    }
-                    //برای نیمه اول سال کنونی
-                    if (MONTH + 1 <= 6 && MONTH + 1 >= 1 && ISMONTHESFAN == false && ISFIRSTHALF == false)
-                    {
-                        ISFIRSTHALF = true;
-                        MONTH += 1;
-                    }
-                    //برای نیمه دوم سال کنونی
-                    if (MONTH + 1 > 6 && MONTH + 1 < 13 && ISFIRSTHALF == false && ISMONTHESFAN == false)
-                    {
-                        if (DAY == 31)
-                            DAY = 1;
-                        MONTH += 1;
-                        CURRENTYEAR = true;
-                    }
-
-                    if (MONTH > 12 && ISMONTHESFAN == false && CURRENTYEAR == false)
-                    {
-                        YEAR += 1;
-                        //برای نیمه دوم سال بعد
-                        if (DAY == 31 && MONTH + 1 > 6)
-                        {
-                            DAY = 1;
-                            MONTH += 1;
-                        }
-                        else
-                        {
-                            DAY = int.Parse(txtDay.Text);
-                            MONTH += 1;
-                        }
-                    }
-                    //-----------------------
-                    com.Parameters.AddWithValue("@DateNextPay", YEAR + "/" + MONTH + "/" + DAY);
-                    if (chkKarmozd.Checked)
-                    {
-                        com.Parameters.AddWithValue("@PayKarmozd", "0");
-                    }
-                    else
-                    {
-                        com.Parameters.AddWithValue("@PayKarmozd", "1");
-                    }
-                    com.CommandText = "update  tbl_installment set NumberOfInstallment = @NumberOfInstallment , AmountPerInstallment = @AmountPerInstallment , NumberPayInstallment = @NumberPayInstallment , NumberNonPayInstallment = @NumberNonPayInstallment , NumberPayAmount = @NumberPayAmount , NumberNonPayAmount = @NumberNonPayAmount , DateLastPay = @DateLastPay , DateNextPay = @DateNextPay , PayKarmozd = @PayKarmozd where Loan =" + code;
-                    com.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show(".ویرایش با موفقیت انجام شد", "!!پیام", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ISFIRSTHALF = false;
-                    ISMONTHESFAN = false;
-                    CURRENTYEAR = false;
+                    com.Parameters.AddWithValue("@PercentKarmozd", "0");
                 }
+                com.Parameters.AddWithValue("@DateBack", txtDateBack.Text.Trim());
+                com.Parameters.AddWithValue("@NumberOfAghsat", txtNumberAghsat.Text.Trim());
+                com.Parameters.AddWithValue("@DateStart", txtYear.Text.Trim() + "/" + txtMonth.Text.Trim() + "/" + txtDay.Text.Trim());
+                com.Parameters.AddWithValue("@DateFinish", txtYearEnd.Text.Trim() + "/" + txtMonthEnd.Text.Trim() + "/" + txtDayEnd.Text.Trim());
+                com.CommandText = "insert into tbl_loan (RecieverLoan , JoinNumberRecieverLoan , Guarantor , JoinNumberGuarantor , LoanType , Amount , PercentKarmozd , DateBack , NumberOfAghsat , DateStart , DateFinish) values (@RecieverLoan , @JoinNumberRecieverLoan , @Guarantor , @JoinNumberGuarantor , @LoanType , @Amount , @PercentKarmozd , @DateBack , @NumberOfAghsat , @DateStart , @DateFinish)";
+                con.Open();
+                com.ExecuteNonQuery();
+
+                com.Parameters.Clear();
+                com.Parameters.AddWithValue("@NumberOfInstallment", txtNumberAghsat.Text.Trim());
+                com.Parameters.AddWithValue("@AmountPerInstallment", long.Parse(txtMablagh.Text) / long.Parse(txtNumberAghsat.Text));
+                com.Parameters.AddWithValue("@NumberPayInstallment", 0);
+                com.Parameters.AddWithValue("@NumberNonPayInstallment", txtNumberAghsat.Text.Trim());
+                com.Parameters.AddWithValue("@NumberPayAmount", 0);
+                if (chkKarmozd.Checked && txtPercentKarmozd.Text != "0")
+                {
+                    long karmozd = (long.Parse(txtMablagh.Text) * long.Parse(txtPercentKarmozd.Text)) / 100;
+                    com.Parameters.AddWithValue("@NumberNonPayAmount", long.Parse(txtMablagh.Text) + karmozd);
+                }
+                else
+                {
+                    com.Parameters.AddWithValue("@NumberNonPayAmount", txtMablagh.Text);
+                }
+                com.Parameters.AddWithValue("@DateLastPay", "-");
+
+                //-----------------------
+                DAY = int.Parse(txtDay.Text);
+                MONTH = int.Parse(txtMonth.Text);
+                YEAR = int.Parse(txtYear.Text);
+                //برای اسفند ماه
+                if ((MONTH + 1) == 12 && (DAY == 30))
+                {
+                    YEAR += 1;
+                    DAY = 1;
+                    MONTH = 1;
+                    ISMONTHESFAN = true;
+                }
+                if ((MONTH + 1) > 12)
+                {
+                    YEAR += 1;
+                    MONTH = 1;
+                    ISMONTHESFAN = true;
+                }
+                //برای نیمه اول سال کنونی
+                if (MONTH + 1 <= 6 && MONTH + 1 >= 1 && ISMONTHESFAN == false && ISFIRSTHALF == false)
+                {
+                    ISFIRSTHALF = true;
+                    MONTH += 1;
+                }
+                //برای نیمه دوم سال کنونی
+                if (MONTH + 1 > 6 && MONTH + 1 < 13 && ISFIRSTHALF == false && ISMONTHESFAN == false)
+                {
+                    if (DAY == 31)
+                    {
+                        DAY = 1;
+                        MONTH += 2;
+                    }
+                    else
+                    {
+                        MONTH += 1;
+                    }
+                    CURRENTYEAR = true;
+                }
+
+                if (MONTH > 12 && ISMONTHESFAN == false && CURRENTYEAR == false)
+                {
+                    YEAR += 1;
+                    //برای نیمه دوم سال بعد
+                    if (DAY == 31 && MONTH + 1 > 6)
+                    {
+                        DAY = 1;
+                        MONTH += 1;
+                    }
+                    else
+                    {
+                        DAY = int.Parse(txtDay.Text);
+                        MONTH += 1;
+                    }
+                }
+                //-----------------------
+                com.Parameters.AddWithValue("@DateNextPay", YEAR + "/" + MONTH + "/" + DAY);
+                if (chkKarmozd.Checked)
+                {
+                    com.Parameters.AddWithValue("@PayKarmozd", "0");
+                }
+                else
+                {
+                    com.Parameters.AddWithValue("@PayKarmozd", "1");
+                }
+                com.CommandText = "insert into tbl_installment (NumberOfInstallment , AmountPerInstallment , NumberPayInstallment , NumberNonPayInstallment , NumberPayAmount , NumberNonPayAmount , DateLastPay , DateNextPay , PayKarmozd)  values (@NumberOfInstallment , @AmountPerInstallment , @NumberPayInstallment , @NumberNonPayInstallment , @NumberPayAmount , @NumberNonPayAmount , @DateLastPay , @DateNextPay , @PayKarmozd)";
+                com.ExecuteNonQuery();
+                MessageBox.Show(".وام مورد نظر با موفقیت ثبت شد", "!!پیام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                com.CommandText = "select max(Loan) from tbl_loan";
+                maxLoan = int.Parse(com.ExecuteScalar().ToString());
+                txtNumberVam.Text = (maxLoan + 1).ToString();
+                con.Close();
+                txtCodeVamReciever.Clear();
+                txtCodeZamen.Clear();
+                txtMablagh.Clear();
+                chkKarmozd.Checked = false;
+                txtDateBack.Clear();
+                txtNumberAghsat.Clear();
+                txtDay.Clear();
+                txtMonth.Clear();
+                txtYear.Clear();
+                txtDayEnd.Clear();
+                txtMonthEnd.Clear();
+                txtYearEnd.Clear();
+                txtPercentKarmozd.Clear();
+                cboTypeVam.SelectedIndex = -1;
+                cboRecieverVam.SelectedIndex = -1;
+                cboZamen.SelectedIndex = -1;
+                ISFIRSTHALF = false;
+                ISMONTHESFAN = false;
+                CURRENTYEAR = false;
+            }
+            else
+            {
+                com.Connection = con;
+                com.Parameters.Clear();
+                com.Parameters.AddWithValue("@RecieverLoan", cboRecieverVam.Text.Substring(0, cboRecieverVam.Text.IndexOf(">")));
+                com.Parameters.AddWithValue("@JoinNumberRecieverLoan", txtCodeVamReciever.Text.Trim());
+                if (cboZamen.Text.IndexOf("ندارد") >= 0)
+                    com.Parameters.AddWithValue("@Guarantor", "ندارد");
+                else
+                    com.Parameters.AddWithValue("@Guarantor", cboZamen.Text.Substring(0, cboZamen.Text.IndexOf(">")));
+                com.Parameters.AddWithValue("@JoinNumberGuarantor", txtCodeZamen.Text.Trim());
+                com.Parameters.AddWithValue("@LoanType", cboTypeVam.Text.Trim());
+                com.Parameters.AddWithValue("@Amount", txtMablagh.Text.Trim());
+                if (chkKarmozd.Checked)
+                {
+                    com.Parameters.AddWithValue("@PercentKarmozd", txtPercentKarmozd.Text.Trim());
+                }
+                else
+                {
+                    com.Parameters.AddWithValue("@PercentKarmozd", "0");
+                }
+                com.Parameters.AddWithValue("@DateBack", txtDateBack.Text.Trim());
+                com.Parameters.AddWithValue("@NumberOfAghsat", txtNumberAghsat.Text.Trim());
+                com.Parameters.AddWithValue("@DateStart", txtYear.Text.Trim() + "/" + txtMonth.Text.Trim() + "/" + txtDay.Text.Trim());
+                com.Parameters.AddWithValue("@DateFinish", txtYearEnd.Text.Trim() + "/" + txtMonthEnd.Text.Trim() + "/" + txtDayEnd.Text.Trim());
+                com.CommandText = "update tbl_loan set RecieverLoan = @RecieverLoan, JoinNumberRecieverLoan = @JoinNumberRecieverLoan , Guarantor = @Guarantor , JoinNumberGuarantor  = @JoinNumberGuarantor , LoanType = @LoanType , Amount = @Amount , PercentKarmozd = @PercentKarmozd  , DateBack = @DateBack , NumberOfAghsat =@NumberOfAghsat , DateStart  = @DateStart, DateFinish = @DateFinish where Loan  =" + code;
+                con.Open();
+                com.ExecuteNonQuery();
+
+                com.Parameters.Clear();
+                com.Parameters.AddWithValue("@NumberOfInstallment", txtNumberAghsat.Text.Trim());
+                com.Parameters.AddWithValue("@AmountPerInstallment", long.Parse(txtMablagh.Text) / long.Parse(txtNumberAghsat.Text));
+                com.Parameters.AddWithValue("@NumberPayInstallment", 0);
+                com.Parameters.AddWithValue("@NumberNonPayInstallment", txtNumberAghsat.Text.Trim());
+                com.Parameters.AddWithValue("@NumberPayAmount", 0);
+                if (chkKarmozd.Checked && txtPercentKarmozd.Text != "0")
+                {
+                    long karmozd = (long.Parse(txtMablagh.Text) * long.Parse(txtPercentKarmozd.Text)) / 100;
+                    com.Parameters.AddWithValue("@NumberNonPayAmount", long.Parse(txtMablagh.Text) + karmozd);
+                }
+                else
+                {
+                    com.Parameters.AddWithValue("@NumberNonPayAmount", txtMablagh.Text);
+                }
+                com.Parameters.AddWithValue("@DateLastPay", "-");
+
+                //-----------------------
+                DAY = int.Parse(txtDay.Text);
+                MONTH = int.Parse(txtMonth.Text);
+                YEAR = int.Parse(txtYear.Text);
+                //برای اسفند ماه
+                if ((MONTH + 1) % 12 == 0 && (DAY == 31 || DAY == 30))
+                {
+                    YEAR += 1;
+                    DAY = 1;
+                    MONTH = 1;
+                    ISMONTHESFAN = true;
+                }
+                if ((MONTH + 1) > 12)
+                {
+                    YEAR += 1;
+                    MONTH = 1;
+                    ISMONTHESFAN = true;
+                }
+                //برای نیمه اول سال کنونی
+                if (MONTH + 1 <= 6 && MONTH + 1 >= 1 && ISMONTHESFAN == false && ISFIRSTHALF == false)
+                {
+                    ISFIRSTHALF = true;
+                    MONTH += 1;
+                }
+                //برای نیمه دوم سال کنونی
+                if (MONTH + 1 > 6 && MONTH + 1 < 13 && ISFIRSTHALF == false && ISMONTHESFAN == false)
+                {
+                    if (DAY == 31)
+                        DAY = 1;
+                    MONTH += 1;
+                    CURRENTYEAR = true;
+                }
+
+                if (MONTH > 12 && ISMONTHESFAN == false && CURRENTYEAR == false)
+                {
+                    YEAR += 1;
+                    //برای نیمه دوم سال بعد
+                    if (DAY == 31 && MONTH + 1 > 6)
+                    {
+                        DAY = 1;
+                        MONTH += 1;
+                    }
+                    else
+                    {
+                        DAY = int.Parse(txtDay.Text);
+                        MONTH += 1;
+                    }
+                }
+                //-----------------------
+                com.Parameters.AddWithValue("@DateNextPay", YEAR + "/" + MONTH + "/" + DAY);
+                if (chkKarmozd.Checked)
+                {
+                    com.Parameters.AddWithValue("@PayKarmozd", "0");
+                }
+                else
+                {
+                    com.Parameters.AddWithValue("@PayKarmozd", "1");
+                }
+                com.CommandText = "update  tbl_installment set NumberOfInstallment = @NumberOfInstallment , AmountPerInstallment = @AmountPerInstallment , NumberPayInstallment = @NumberPayInstallment , NumberNonPayInstallment = @NumberNonPayInstallment , NumberPayAmount = @NumberPayAmount , NumberNonPayAmount = @NumberNonPayAmount , DateLastPay = @DateLastPay , DateNextPay = @DateNextPay , PayKarmozd = @PayKarmozd where Loan =" + code;
+                com.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show(".ویرایش با موفقیت انجام شد", "!!پیام", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ISFIRSTHALF = false;
+                ISMONTHESFAN = false;
+                CURRENTYEAR = false;
             }
         }
-
         private void txtDateBack_TextChanged(object sender, EventArgs e)
         {
             txtDay.Clear();
