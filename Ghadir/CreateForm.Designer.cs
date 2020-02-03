@@ -295,7 +295,7 @@
             this.txtCardNumber.Font = new System.Drawing.Font("B Roya", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.txtCardNumber.ForeColor = System.Drawing.Color.OrangeRed;
             this.txtCardNumber.Location = new System.Drawing.Point(492, 179);
-            this.txtCardNumber.MaxLength = 16;
+            this.txtCardNumber.MaxLength = 24;
             this.txtCardNumber.Name = "txtCardNumber";
             this.txtCardNumber.Size = new System.Drawing.Size(198, 29);
             this.txtCardNumber.TabIndex = 8;
