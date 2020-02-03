@@ -72,13 +72,9 @@ namespace Ghadir
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtFname.TextLength ==0 || txtLname.TextLength == 0 || txtFatherName.TextLength == 0 || txtID.TextLength == 0 || txtSahm.TextLength == 0 || txtSarmaie.TextLength == 0 || txtPhoneNumber.TextLength == 0 || txtYear.TextLength == 0 || txtMonth.TextLength == 0 || txtDay.TextLength == 0 || txtCardNumber.TextLength == 0)  
+            if (txtFname.TextLength ==0 || txtLname.TextLength == 0 || txtFatherName.TextLength == 0 || txtSahm.TextLength == 0 || txtSarmaie.TextLength == 0)  
             {
                 MessageBox.Show(".بعضی از فیلد ها پر نشده است", "!!هشدار", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (txtYear.TextLength != 4)
-            {
-                MessageBox.Show(".لطفا فیلد های تاریخ را درست وارد کنید", "!!خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
