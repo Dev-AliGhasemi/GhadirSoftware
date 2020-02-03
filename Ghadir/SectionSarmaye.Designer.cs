@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            AnimatorNS.Animation animation1 = new AnimatorNS.Animation();
+            AnimatorNS.Animation animation2 = new AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SectionSarmaye));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRefresh = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -392,9 +392,8 @@
             this.animatorPanelSearchFund.SetDecoration(this.txtPayMonthly, AnimatorNS.DecorationType.None);
             this.txtPayMonthly.Font = new System.Drawing.Font("B Roya", 13F);
             this.txtPayMonthly.ForeColor = System.Drawing.Color.OrangeRed;
-            this.txtPayMonthly.Location = new System.Drawing.Point(49, 192);
+            this.txtPayMonthly.Location = new System.Drawing.Point(438, 346);
             this.txtPayMonthly.Name = "txtPayMonthly";
-            this.txtPayMonthly.ReadOnly = true;
             this.txtPayMonthly.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPayMonthly.Size = new System.Drawing.Size(200, 36);
             this.txtPayMonthly.TabIndex = 3;
@@ -421,7 +420,7 @@
             this.animatorPanelSearchFund.SetDecoration(this.txtCode, AnimatorNS.DecorationType.None);
             this.txtCode.Font = new System.Drawing.Font("B Roya", 13F);
             this.txtCode.ForeColor = System.Drawing.Color.OrangeRed;
-            this.txtCode.Location = new System.Drawing.Point(438, 347);
+            this.txtCode.Location = new System.Drawing.Point(49, 190);
             this.txtCode.Name = "txtCode";
             this.txtCode.ReadOnly = true;
             this.txtCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -435,7 +434,7 @@
             this.animatorPanelSearchFund.SetDecoration(this.label11, AnimatorNS.DecorationType.None);
             this.label11.Font = new System.Drawing.Font("B Roya", 15.75F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(644, 347);
+            this.label11.Location = new System.Drawing.Point(255, 190);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label11.Size = new System.Drawing.Size(119, 35);
@@ -464,7 +463,7 @@
             this.animatorPanelSearchFund.SetDecoration(this.label10, AnimatorNS.DecorationType.None);
             this.label10.Font = new System.Drawing.Font("B Roya", 15.75F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(257, 191);
+            this.label10.Location = new System.Drawing.Point(646, 345);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label10.Size = new System.Drawing.Size(121, 35);
@@ -684,22 +683,22 @@
             // 
             this.animatorPanelSearchFund.AnimationType = AnimatorNS.AnimationType.Transparent;
             this.animatorPanelSearchFund.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.animatorPanelSearchFund.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.animatorPanelSearchFund.DefaultAnimation = animation2;
             // 
             // SectionSarmaye
             // 
