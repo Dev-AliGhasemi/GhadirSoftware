@@ -42,6 +42,7 @@
             this.flowListNotes = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.panelTools.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.picClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -90,48 +92,50 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("B Roya", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTitle.Font = new System.Drawing.Font("B Roya", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblTitle.ForeColor = System.Drawing.Color.LawnGreen;
-            this.lblTitle.Location = new System.Drawing.Point(249, 32);
+            this.lblTitle.Location = new System.Drawing.Point(0, 32);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblTitle.Size = new System.Drawing.Size(0, 44);
+            this.lblTitle.Size = new System.Drawing.Size(532, 474);
             this.lblTitle.TabIndex = 59;
+            this.lblTitle.Text = "sdafasdfasdf";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtText
             // 
-            this.txtText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(30)))), ((int)(((byte)(51)))));
+            this.txtText.BackColor = System.Drawing.Color.White;
             this.txtText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtText.Font = new System.Drawing.Font("B Roya", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.txtText.ForeColor = System.Drawing.Color.White;
-            this.txtText.Location = new System.Drawing.Point(8, 74);
+            this.txtText.ForeColor = System.Drawing.Color.Black;
+            this.txtText.Location = new System.Drawing.Point(0, 74);
             this.txtText.Multiline = true;
             this.txtText.Name = "txtText";
             this.txtText.ReadOnly = true;
             this.txtText.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtText.Size = new System.Drawing.Size(520, 394);
+            this.txtText.Size = new System.Drawing.Size(538, 432);
             this.txtText.TabIndex = 60;
             // 
             // panelTools
             // 
+            this.panelTools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
             this.panelTools.Controls.Add(this.picRefresh);
             this.panelTools.Controls.Add(this.picDelete);
             this.panelTools.Controls.Add(this.picSave);
             this.panelTools.Controls.Add(this.picNewNote);
-            this.panelTools.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelTools.Location = new System.Drawing.Point(0, 474);
+            this.panelTools.Location = new System.Drawing.Point(535, 471);
             this.panelTools.Name = "panelTools";
-            this.panelTools.Size = new System.Drawing.Size(699, 32);
+            this.panelTools.Size = new System.Drawing.Size(164, 35);
             this.panelTools.TabIndex = 61;
             // 
             // picRefresh
             // 
             this.picRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.picRefresh.Image = global::Ghadir.Properties.Resources.iconRefreshNote;
-            this.picRefresh.Location = new System.Drawing.Point(579, 4);
+            this.picRefresh.Location = new System.Drawing.Point(44, 7);
             this.picRefresh.Name = "picRefresh";
             this.picRefresh.Padding = new System.Windows.Forms.Padding(200000);
             this.picRefresh.Size = new System.Drawing.Size(30, 24);
@@ -145,7 +149,7 @@
             // 
             this.picDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.picDelete.Image = global::Ghadir.Properties.Resources.iconDeleteNote;
-            this.picDelete.Location = new System.Drawing.Point(609, 4);
+            this.picDelete.Location = new System.Drawing.Point(74, 7);
             this.picDelete.Name = "picDelete";
             this.picDelete.Size = new System.Drawing.Size(30, 24);
             this.picDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -158,7 +162,7 @@
             // 
             this.picSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.picSave.Image = global::Ghadir.Properties.Resources.iconEditNote;
-            this.picSave.Location = new System.Drawing.Point(639, 4);
+            this.picSave.Location = new System.Drawing.Point(104, 7);
             this.picSave.Name = "picSave";
             this.picSave.Size = new System.Drawing.Size(30, 24);
             this.picSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -171,7 +175,7 @@
             // 
             this.picNewNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.picNewNote.Image = global::Ghadir.Properties.Resources.iconCreateNote;
-            this.picNewNote.Location = new System.Drawing.Point(669, 4);
+            this.picNewNote.Location = new System.Drawing.Point(134, 7);
             this.picNewNote.Name = "picNewNote";
             this.picNewNote.Size = new System.Drawing.Size(30, 24);
             this.picNewNote.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -183,10 +187,10 @@
             // flowListNotes
             // 
             this.flowListNotes.AutoScroll = true;
-            this.flowListNotes.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowListNotes.Location = new System.Drawing.Point(535, 32);
+            this.flowListNotes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
+            this.flowListNotes.Location = new System.Drawing.Point(535, 74);
             this.flowListNotes.Name = "flowListNotes";
-            this.flowListNotes.Size = new System.Drawing.Size(164, 442);
+            this.flowListNotes.Size = new System.Drawing.Size(164, 394);
             this.flowListNotes.TabIndex = 62;
             // 
             // bunifuElipse1
@@ -194,12 +198,27 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
+            this.label2.Font = new System.Drawing.Font("B Roya", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.ForeColor = System.Drawing.Color.LawnGreen;
+            this.label2.Location = new System.Drawing.Point(535, 29);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label2.Size = new System.Drawing.Size(164, 42);
+            this.label2.TabIndex = 63;
+            this.label2.Text = " نام یادداشت";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(699, 506);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.flowListNotes);
             this.Controls.Add(this.panelTools);
             this.Controls.Add(this.txtText);
@@ -239,5 +258,6 @@
         private System.Windows.Forms.PictureBox picDelete;
         private System.Windows.Forms.PictureBox picSave;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label2;
     }
 }
