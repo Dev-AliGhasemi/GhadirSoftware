@@ -26,13 +26,13 @@ namespace Ghadir
         bool minimize = false;
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            frmCreate = new CreateForm(true,0);
+            frmCreate = new CreateForm(true, 0);
             frmCreate.ShowDialog();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            frmCreate = new CreateForm(false,int.Parse(dataGridAza.Rows[dataGridAza.CurrentCell.RowIndex].Cells[1].Value.ToString()));
+            frmCreate = new CreateForm(false, int.Parse(dataGridAza.Rows[dataGridAza.CurrentCell.RowIndex].Cells[1].Value.ToString()));
             frmCreate.ShowDialog();
         }
 
@@ -49,8 +49,8 @@ namespace Ghadir
             dataTable.Columns.Add("کد ملی");
             dataTable.Columns.Add("Phone");
             dataTable.Columns.Add("تعداد سهم");
-            dataTable.Columns.Add("سرمایه اولیه");
-            com.CommandText = "select * from tbl_members";
+            dataTable.Columns.Add("کل سرمایه");
+            com.CommandText = "select tbl_members.Code, tbl_members.Fname, tbl_members.Lname, tbl_members.FatherName, tbl_members.DateBorn , tbl_members.AccountNumber, tbl_members.NationalCode,PhoneNumber, tbl_members.ShareNumber,tbl_fund.TotalFund from tbl_members inner join tbl_fund on tbl_members.Code = tbl_fund.Code ";
             con.Open();
             dataReader = com.ExecuteReader();
             int i = 0;
@@ -69,7 +69,7 @@ namespace Ghadir
                 dataTable.Rows[i][9] = dataReader[8];
                 dataTable.Rows[i][10] = dataReader[9];
                 i++;
-            }
+            }         
             dataReader.Close();
             dataGridAza.DataSource = dataTable;
             dataGridAza.Columns[1].HeaderText = "شماره عضویت";
@@ -82,7 +82,7 @@ namespace Ghadir
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-            if (dataGridAza.RowCount !=0)
+            if (dataGridAza.RowCount != 0)
             {
                 btnDelete.Enabled = true;
                 btnUpdate.Enabled = true;
@@ -98,8 +98,8 @@ namespace Ghadir
             if (dataGridAza.Rows.Count != 0)
             {
                 dataGridAza.Rows[0].Selected = false;
-                dataGridAza.Rows[dataGridAza.Rows.Count-1].Selected = true;
-                btnRefresh_Click(null, null);
+                dataGridAza.Rows[dataGridAza.Rows.Count - 1].Selected = true;
+                //btnRefresh_Click(null, null);
             }
         }
 
@@ -141,7 +141,7 @@ namespace Ghadir
             btnRefresh.Enabled = false;
             dataTable.Clear();
             //dataTable.Columns.Clear();
-            com.CommandText = "select * from tbl_members";
+            com.CommandText = "select tbl_members.Code, tbl_members.Fname, tbl_members.Lname, tbl_members.FatherName, tbl_members.DateBorn , tbl_members.AccountNumber, tbl_members.NationalCode,PhoneNumber, tbl_members.ShareNumber,tbl_fund.TotalFund from tbl_members inner join tbl_fund on tbl_members.Code = tbl_fund.Code ";
             con.Open();
             dataReader = com.ExecuteReader();
             int i = 0;

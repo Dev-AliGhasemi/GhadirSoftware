@@ -120,7 +120,6 @@ E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\bin\Debug\Ghadir.pdb
 E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.exe
 E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.pdb
 E:\Project C#\Ghadir\setup ghadir\Ghadir\Ghadir\obj\Debug\Ghadir.csprojResolveAssemblyReference.cache
-D:\Ghadir\Ghadir Full\ghadir source code\ghadir code with setup\Ghadir\Ghadir\obj\Debug\Ghadir.csprojAssemblyReference.cache
 D:\Ghadir\Ghadir Full\ghadir source code\ghadir code with setup\Ghadir\Ghadir\obj\Debug\Ghadir.CreateForm.resources
 D:\Ghadir\Ghadir Full\ghadir source code\ghadir code with setup\Ghadir\Ghadir\obj\Debug\Ghadir.ExitForm.resources
 D:\Ghadir\Ghadir Full\ghadir source code\ghadir code with setup\Ghadir\Ghadir\obj\Debug\Ghadir.Form1.resources
@@ -151,3 +150,4 @@ D:\Ghadir\Ghadir Full\ghadir source code\ghadir code with setup\Ghadir\Ghadir\bi
 D:\Ghadir\Ghadir Full\ghadir source code\ghadir code with setup\Ghadir\Ghadir\bin\Debug\Ghadir.pdb
 D:\Ghadir\Ghadir Full\ghadir source code\ghadir code with setup\Ghadir\Ghadir\obj\Debug\Ghadir.csproj.CoreCompileInputs.cache
 D:\Ghadir\Ghadir Full\ghadir source code\ghadir code with setup\Ghadir\Ghadir\obj\Debug\Ghadir.csproj.CopyComplete
+D:\Ghadir\Ghadir Full\ghadir source code\ghadir code with setup\Ghadir\Ghadir\obj\Debug\Ghadir.csprojAssemblyReference.cache
