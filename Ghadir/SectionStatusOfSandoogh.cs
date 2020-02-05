@@ -34,15 +34,17 @@ namespace Ghadir
             {
                 lblTotalSandoogh.Text = "0";
             }
-            com.CommandText = "select Loan from tbl_installment where NumberNonPayInstallment != 0 or PayKarmozd = 0";
+            //com.CommandText = "select Loan from tbl_installment where NumberNonPayInstallment != 0 or PayKarmozd = 0";
+            com.CommandText = "select abs(((NumberOfInstallment*AmountPerInstallment)-(NumberNonPayAmount+NumberPayAmount))) as Karmozd from tbl_installment where PayKarmozd = 1";
             Adapter.SelectCommand = com;
             Adapter.Fill(dataTable);
             for (int i = 0; i < dataTable.Rows.Count ; i++)
             {
-                com.CommandText = "select NumberNonPayAmount from tbl_installment where Loan =" + dataTable.Rows[i][0];
-                Mojoodi += long.Parse(com.ExecuteScalar().ToString());
+                //com.CommandText = "select NumberNonPayAmount from tbl_installment where Loan =" + dataTable.Rows[i][0];
+                //Mojoodi += long.Parse(com.ExecuteScalar().ToString());
+                Mojoodi += long.Parse(dataTable.Rows[i][0].ToString());
             }
-            lblTotalMojodiSandoogh.Text = ((long.Parse(lblTotalSandoogh.Text)) - (Mojoodi)).ToString();
+            lblTotalMojodiSandoogh.Text = ((long.Parse(lblTotalSandoogh.Text)) + (Mojoodi)).ToString();
             com.CommandText = "select count(Loan) from tbl_Loan";
             lblTotalVam.Text = com.ExecuteScalar().ToString();
             com.CommandText = "select sum(ShareNumber) from tbl_members";
@@ -64,5 +66,6 @@ namespace Ghadir
         {
             SectionStatusOfSandoogh_Load(null, null);
         }
+
     }
 }
